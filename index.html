@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#283618" />
+  <title>SkillBridge — Learn. Build. Prove. Get Hired.</title>
+  <link rel="icon" type="image/png" href="assets/skillbridge-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="mobile-backdrop" id="mobileBackdrop"></div>
+  <aside class="sidebar" id="sidebar">
+    <a class="brand" href="#" data-view="student-dashboard" aria-label="SkillBridge home">
+      <img src="assets/skillbridge-logo.png" alt="SkillBridge — Learn. Build. Prove." />
+    </a>
+    <nav class="nav" id="mainNav"></nav>
+    <button class="role-switch" id="roleSwitch" aria-label="Switch preview role"><span id="roleAvatar">ST</span><span><strong id="roleName">Student Preview</strong><small id="roleLabel">Student</small></span><span class="chevron">⌄</span></button>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+      <div class="search"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 4.5 4.5"/></svg></span><input id="globalSearch" aria-label="Search courses, jobs, and students" placeholder="Search courses, jobs, students..." /><kbd>⌘ K</kbd></div>
+      <div class="top-actions">
+        <span class="demo-notice" title="No live backend is connected; data screens show honest empty states"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 2.8 19h18.4L12 3Z"/><path d="M12 9v4m0 3h.01"/></svg>PREVIEW · NO LIVE DATA</span>
+        <button class="icon-btn" id="themeBtn" title="Toggle theme" aria-label="Toggle dark mode" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"/></svg></button>
+        <button class="icon-btn notification-btn" id="notificationBtn" title="Notifications" aria-label="Notifications"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-8 12h4"/></svg><span></span></button>
+        <div class="top-profile"><span class="avatar" id="topAvatar">ST</span><span><strong id="topName">Student Preview</strong><small id="topRole">Student</small></span></div>
+      </div>
+    </header>
+
+    <section class="content" id="content"></section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+  <div class="modal-backdrop" id="modalBackdrop">
+    <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalHeading"><button class="modal-close" id="modalClose" aria-label="Close dialog">×</button><div id="modalBody"></div></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
